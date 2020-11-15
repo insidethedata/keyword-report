@@ -50,7 +50,7 @@ initialise the pipenv environment and then install dependent packages:
 
 ```
 $ pipenv shell
-$ pipenv install
+$ pipenv install --dev
 ```
 
 ## Usage
@@ -74,3 +74,8 @@ Testing requires `pytest` and can be run with the following scripts:
 Snapshots are used to test the final rendered output and must be updated on
 a change to the render logic. This has been done with the `snapshottest`
 library.
+
+IMPORTANT: If you are running in Windows, the repository snapshot will fail
+the first test as it contains Unix style line endings. To solve this problem,
+you first need to regenerate a snapshot using `pipenv run snapshot-update` 
+before making changes.
