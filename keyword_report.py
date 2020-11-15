@@ -7,8 +7,6 @@ from html5print import HTMLBeautifier
 import glob
 import os
 
-#
-
 
 def extract_file(file_name: str = "") -> str:
     """
@@ -126,6 +124,8 @@ def get_stems(doc_dict: Dict[str, str],
 
     for v in doc_dict.values():
         tokens: Dict = clean_text_by_word(v)
+
+        # Generate a list of stems from keywords
         filtered_tokens: List[str] = [
             k for k in tokens.keys() if k in keywords_set
         ]
@@ -133,6 +133,7 @@ def get_stems(doc_dict: Dict[str, str],
         for word in filtered_tokens:
             stems.add(tokens[word].token)
 
+        # Build list of words per stem (including non-keywords)
         for stem in stems:
 
             word_list = set()
@@ -295,7 +296,6 @@ def generate_table(output_object: List, doc_list: List[str]) -> str:
                 map(lambda x: highlight_keywords(x, entry["words"]),
                     entry["sentences"][k]))
 
-        # sentence_list: str = "\n".join(entry["sentences"])
         entry_output: str = f"""
         <tr>
             <td><span class = "highlight">{entry["stem"]}</span> ({word_list})</td>
