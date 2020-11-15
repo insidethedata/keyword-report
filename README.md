@@ -59,7 +59,7 @@ the extension `*.txt`.
 
 The application can be run as follows:
 ```
-pipenv run keyword_report
+$ pipenv run keyword_report
 ```
 
 An output file named `summary.html` will be generated in the same folder 
