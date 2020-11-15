@@ -9,12 +9,12 @@ most important keywords within each document. Keywords are determined using
 the TextRank algorithm which is a variation of the PageRank algorithm
 developed by Google.
 
-Keywords are determined on a per document basis with the highest weighted
+Keywords are determined on a 'per document' basis with the highest weighted
 words making up the first 10 etc. This ensures that important words for each
 document are identified as opposed to just words which are important across
 every document.
 
-The keywords are lemmatised meaning that two words which share the same stem
+The keywords are lemmatised, meaning that two words which share the same stem
 are treated as the same word. For example `work` and `worked`.
 
 Once up to 10 keywords have been determined per document, word stems are 
@@ -31,7 +31,7 @@ The application requires python 3.8 and pipenv.
 If you don't have don't already have pipenv as part of your
 python environment, it can be installed as follows:
 
-### MacOS
+### MacOS (requires Homebrew)
 ```
 $ brew install pipenv
 ```
