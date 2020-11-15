@@ -6,6 +6,8 @@ verify_ssl = true
 [dev-packages]
 yapf = "*"
 pylint = "*"
+pytest = "*"
+snapshottest = "*"
 
 [packages]
 gensim = "*"
@@ -13,3 +15,8 @@ html5print = "*"
 
 [requires]
 python_version = "3.8"
+
+[scripts]
+keyword_report = "python3 keyword_report.py"
+test = "pytest -v --disable-warnings"
+snapshot-update = "pytest --snapshot-update"

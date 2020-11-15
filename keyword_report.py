@@ -273,7 +273,7 @@ def generate_table(output_object: List, doc_list: List[str]) -> str:
     <table class="data-table">
         <tr>
             <th>Word stem (Words)</th>
-            <th>Total sentence occurances</th>
+            <th>Total sentence occurrences</th>
             <th>Documents</th>
             <th>Sentences containing the words</th>
         </tr>
@@ -314,7 +314,7 @@ def generate_table(output_object: List, doc_list: List[str]) -> str:
     output_str = header + doc_list_str + table_header + "\n".join(
         table_items) + footer
 
-    return output_str
+    return HTMLBeautifier.beautify(output_str, indent=2)
 
 
 def main():
@@ -330,9 +330,6 @@ def main():
 
     # Generate report
     output_html = generate_table(output, sorted(doc_dict.keys()))
-
-    # Reformat HTML for pretty printing
-    output_html = HTMLBeautifier.beautify(output_html, indent=2)
 
     # Save report
     with open("summary.html", "w+", encoding='utf-8') as f:
