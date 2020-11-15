@@ -1,0 +1,57 @@
+html, body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: blue;
+}
+
+a:visited {
+    color: blue;
+}
+
+h3 {
+    font-size: 1rem;
+}
+
+table {
+    border-collapse: collapse;
+    border: 2px solid rgb(200, 200, 200);
+    margin: 10px 0;
+}
+
+td, th {
+    padding: 10px;
+    border: 2px solid rgb(220, 220, 220);
+}
+
+td {
+    vertical-align: top;
+}
+
+
+th {
+    text-align: start;
+}
+
+.doclist {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+}
+
+.highlight {
+    font-weight: 700;
+}
+
+.sentence {
+    margin: 0;
+    padding: 10px 4px;
+}
+
+.sentence:nth-of-type(even) {
+    background-color: rgb(245,245,245);
+    border-radius: 5px;
+}
