@@ -324,7 +324,7 @@ def main():
     keywords_set: Set(str) = get_keywords(doc_dict)
     stems: Dict[str, Set[str]] = get_stems(doc_dict, keywords_set)
 
-    # Generate report object and sort by occurances
+    # Generate report object and sort by occurrences
     output = build_output(doc_dict, stems)
     output = sorted(output, key=lambda x: x["sentence_count"], reverse=True)
 
